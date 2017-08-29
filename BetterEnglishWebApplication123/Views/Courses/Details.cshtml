@@ -1,0 +1,90 @@
+﻿@model BetterEnglishWebApplication123.Models.Course
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Course</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.scheduleIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.scheduleIn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.scheduleEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.scheduleEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cardNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cardNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpiresDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpiresDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CVN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CVN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CourseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

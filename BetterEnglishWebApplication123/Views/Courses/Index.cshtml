@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BetterEnglishWebApplication123.Models.Course>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.scheduleIn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.scheduleEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.payment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cardNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpiresDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CVN)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.scheduleIn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.scheduleEnd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.payment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cardNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpiresDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CVN)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CourseID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CourseID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CourseID })
+        </td>
+    </tr>
+}
+
+</table>
