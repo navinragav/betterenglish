@@ -39,12 +39,18 @@ namespace BetterEnglishWebApplication123.DAL
             context.SaveChanges();
             var enrollments = new List<Enrollment>
             {
-
-           new Enrollment{EnrollmentID="X123",},
-            new Enrollment{EnrollmentID="X256"},
-             new Enrollment{EnrollmentID="X356"},
-              new Enrollment{EnrollmentID="X139"},
-               new Enrollment{EnrollmentID="X134"},
+            new Enrollment{EnrollmentID="X123", StudentID="123",CourseID="121",Grade=Grade.A},
+            new Enrollment{EnrollmentID="X124", StudentID="131",CourseID="139",Grade=Grade.C},
+            new Enrollment{EnrollmentID="X125", StudentID="127",CourseID="156",Grade=Grade.B},
+            new Enrollment{EnrollmentID="X126", StudentID="127",CourseID="121",Grade=Grade.B},
+            new Enrollment{EnrollmentID="X127", StudentID="124",CourseID="139",Grade=Grade.F},
+            new Enrollment{EnrollmentID="X128", StudentID="130",CourseID="156",Grade=Grade.F},
+            new Enrollment{EnrollmentID="X129", StudentID="128",CourseID="121", Grade=Grade.B},
+            new Enrollment{EnrollmentID="X130", StudentID="129",CourseID="139", Grade=Grade.C},
+            new Enrollment{EnrollmentID="X131", StudentID="128",CourseID="156",Grade=Grade.F},
+            new Enrollment{EnrollmentID="X132", StudentID="130",CourseID="121",Grade=Grade.C},
+            new Enrollment{EnrollmentID="X133", StudentID="125",CourseID="139", Grade=Grade.F},
+            new Enrollment{EnrollmentID="X134", StudentID="125",CourseID="156",Grade=Grade.A},
             };
             enrollments.ForEach(s => context.Enrollments.Add(s));
             context.SaveChanges();

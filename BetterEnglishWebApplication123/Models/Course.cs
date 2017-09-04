@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -23,6 +25,7 @@ namespace BetterEnglishWebApplication123.Models
     {
         [Key]
         [Required]
+       // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "CourseID")]
         public string CourseID { get; set; }
         public Type Type { get; set; }
@@ -60,6 +63,8 @@ namespace BetterEnglishWebApplication123.Models
         [Required]
         [Display(Name = "CVN")]
         public int CVN { get; set; }
+
+        public virtual ICollection<Enrollment> Enrollment { get; set; }
 
         internal static void ForEach(Func<object, object> p)
         {
